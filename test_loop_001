@@ -1,0 +1,123 @@
+#!/usr/bin/env python3 
+# PYTHON文件开始的第一行“#!”，表示执行一些特殊命令，通常“use Python on a Unix, Linux, or Unix-like system”时会用到。
+'''
+student = ['党志文', '浦欣然', '罗鸿朗', '姜信然', '居俊德', '宿鸿福', '张成和', '林景辉', '戴英华']
+for i in student:
+    print(i+'在不在？') # 列表student内的元素就是一群排队等着办业务的人 i就是那个空房间或者柜台，字典也可以是一群排队等着办业务的人
+'''
+import time
+
+for i in [1,2,3,4,5]:
+   print(i)
+print('-------')
+#有一群数字在排队办业务，也就是列表[1,2,3,4,5]
+#它们中的每一个被叫到号的时候(for i in)，就轮流进去一个空房间办业务——也叫做遍历
+#每一个数字进去房间之后，都对计算机说：“喂，我要办这个业务：帮忙把我自己打印出来”，也就是print(i)
+#然后计算机忠实的为每一个数字提供了打印服务，将1,2,3,4,5都打印在了屏幕上
+# for...in...循环 为什么总用i？因为英文是item（元素）——也就是空房间、变量。
+
+for i in [1,2,3]:
+    print(i)
+print('-------')
+
+for number in [1,2]:
+    print(number)
+print('-------')
+
+for LOVE in [1,2]:
+    print(LOVE)
+print('-------')
+
+print('事情办完了，现在留在房间里的人事谁？', i)
+
+dict = {'日本': '东京', '中国': '北京', '美国': '纽约', '法国': '巴黎'}
+for i in dict:
+    print(i)
+# 字典、列表、字符串、元组都是一群等着办业务的人，但是整数和浮点数不属于一群等着办业务的人
+for i in '吴承恩':
+    print(i)
+
+a = '100'
+
+b = "0.01"
+
+for i in a:
+    print(i)
+
+for i in b:
+    print(i)
+
+
+for i in range(3):
+    print('我很棒')
+
+
+for i in range(3):
+    print('书桓走的第'+str(i)+'天，想他')
+    time.sleep(1)
+
+for i in range(0,10,3): # 从0到9，取头不取尾。间隔数3
+    print(i)
+
+for i in range(1,101):
+    print('第'+str(i)+'个乘积为：',5*i)
+    pass
+d = {'小明':'醋','小红':'油','小白':'盐','小张':'米'}
+for k in d.keys(): 
+    print(k) # 打印键值对中的键
+for i in d:
+    print(d[i]) # d[i] 取得的是键值对中的值——把这四个人要买的东西依次print出来 
+# ————————————————————————————————————————————————————————————————————————————————————
+for key,value in d.items():
+    print (key, '=>', value)  # 打印字典d的键值对
+    time.sleep(0.5)
+# ————————————————————————————————————————————————————————————————————————————————————
+
+# while循环解决不知道循环次数的问题
+
+a = 0
+while a < 5: # 放行条件
+    a = a + 1 # 办事流程
+    print(a)
+
+man = ''  # 注：''代表空字符串
+while man != '有':  #注：!=代表不等于
+    man = input('有没有愿意为小龙女死的男人？没有的话就不能出古墓。')
+print('小龙女可以出古墓门下山啦~')
+
+# 欢迎回家
+
+
+password = ''  # 变量password用来保存输入的密码
+
+while password != '816':
+
+    password = input('尝试输入密码：')
+
+print('欢迎回家！')
+# print(a)有缩进的时候打印5次，没缩进的时候只打印一次
+a = 0
+while a < 5:                  # 当a<5时，就自动执行后续缩进部分的语句 要先定义a的值，不然，这段while不执行，因为前面a的值为5
+                              # 循环开始的a值是？
+    print('现在的a值是：'+ str(a))
+    a = a + 1                 # 每执行一次循环，变量a的值都加1
+    print('加1后的a值是：'+ str(a)) # 加一后的a值是？
+
+print(a)
+
+# 1到100分别乘以5
+a = 0
+while a < 100:
+    a = a + 1
+    print(a*5)
+for i in range(0,5):
+    i +=1
+    print('明日复明日')
+print('明日何其多')
+
+i = 0
+while i < 5:
+    i += 1
+    print('while版本：明日复明日')
+print('明日何其多')
+# for和while的区别 把一件事情重复做N遍，两者都可以，如果循环次数明确就用for，如果循环次数不明，就用while
